@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Charlotte Tardiveau - Laisser un avis{% endblock %}
+
+{% block body %}
+<head>
+    <link rel="stylesheet" href="{{ asset('stylecss/styleNew.css')}}">
+</head>
+<div class="container">
+    <h2>Laissez un avis</h1>
+    <div class="form-container">
+        {{ include('avis/_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 165, 54);
+    margin-top: 25vh;
+    height: 75vh;
+    position: relative;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30vh;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .form-group label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-container .form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #e4e4ec;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: rgb(71, 225, 228);
+}
+
+.btn {
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bouttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-primary {
+    font-family: 'uniSans';
+    background-color: rgb(71, 225, 228);
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid rgb(71, 225, 228);
+}
+
+.btn-primary:hover {
+    background-color: rgb(24, 166, 168);
+    border: 2px solid rgb(24, 166, 168);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-info {
+    background-color: rgb(255, 187, 102);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-info:hover {
+    background-color: rgb(255, 165, 54);
+}
+
+.alert {
+    padding: 12px 15px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.alert-danger hr {
+    border-top-color: #f1b0b7;
+}
+
+.alert-danger .alert-link {
+    color: #491217;
+}
+
+.alert-danger .alert-link:hover {
+    color: #3a0d14;
+}

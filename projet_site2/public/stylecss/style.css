@@ -1,0 +1,646 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'uniSans';
+    src: url(../font/BebasNeue-Regular.eot);
+    src: url(../font/BebasNeue-Regular.otf);
+    src: url(../font/BebasNeue-Regular.ttf);
+    src: url(../font/BebasNeue-Regular.woff);
+    src: url(../font/BebasNeue-Regular.woff2);
+}
+body{
+    background-color: rgb(255, 165, 54);
+    box-sizing: border-box;
+    font-family: 'uniSans';
+    height: 100%;
+    position: relative;
+}
+
+
+/*------------header----------------*/
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    padding: 50px 100px;
+}
+header.sticky{
+    transition: 1s;
+    padding: 5px 50px;
+    background-color: #fff;
+    height: auto;
+}
+header .titre{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 1s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+header .logo{
+    width: 10vh;
+    height: 10vh;
+    margin: 0 2vh;
+}
+header h1{
+    text-align: start;
+    margin: 0;
+}
+header.sticky h1{
+    text-align: start;
+    margin: 0;
+    padding: 1vh 0;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;  
+}
+header ul li a{
+    position: relative;
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    font-size: 2em;
+}
+header ul li a:hover{
+    color: rgb(71, 225, 228);
+}
+header.sticky .titre,
+header.sticky ul li a{
+    color: #000;
+}
+header.sticky ul li a:hover{
+    color: rgb(255, 165, 54);
+}
+
+    /*----------for the burger menu-------------*/
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+    
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px;
+}
+    
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+    
+.nav-links li {
+    display: inline;
+}
+
+/*-----------------main------------------*/
+    /*------------------first section----------------*/
+.first{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+.first .fond_ordinateur{
+    min-width: 200vh;
+    height: 120vh;
+    filter: brightness(80%);
+    transform: translateY(-5%);
+}
+.first .fond_tablette{
+    display: none;
+    width: 100vh;
+    height: 140vh;
+    filter: brightness(80%);
+}
+.first h2{
+    position: absolute;
+    top: 40%;
+    left: 23%;
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+
+    /*------------------------------second section-----------------------------*/
+    /*------------------information------------------*/
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    font-size: 2em;
+    background-color: rgb(255, 165, 54); 
+    padding: 5vh 0;
+}
+.info h3{
+    margin-bottom: 2vh;
+}
+.info .containerObj{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.info .containerObj .premierObj{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.info .containerObj .premierObj .imgObj1{
+    width: 90%;
+    height: 70vh;
+    border-radius: 20px;
+}
+.info .containerObj2{
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vh;
+}
+
+.info .containerObj .deuxiemeObj,
+.info .containerObj .troisiemeObj{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: auto;
+    height: 33vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.info .containerObj .deuxiemeObj .imgObj2,
+.info .containerObj .troisiemeObj .imgObj3{
+    width: 80vh;
+    height: 50vh;
+    border-radius: 20px;
+}
+.info .objTexte{
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 1.5vh;
+    padding: 0vh 2vh;
+}
+
+
+    /*------------------section sport proposés-----------------------*/
+.infoSport{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: rgb(71, 225, 228);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.infoSport .sport1{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.infoSport .container{
+    width: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoSport .container .sport2{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.infoSport h3{
+    font-size: 3em;
+    margin-top: 5vh;
+}
+.infoSport .autres{
+    width: 100%;
+    font-size: 2.5em;
+    background-color: #000;
+    color: #fff;
+    padding: 5vh 0;
+}
+.infoSport img{
+    width: 60vh;
+    height: 35vh;
+    margin: 4vh 0;
+}
+.infoSport p{
+    font-size: 2.8em;
+}
+
+    /*------------------------------------third section----------------------------*/
+.commentaire {
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+    background-color: #fff;
+    width: 100%;
+}
+    
+.commentaire #comments{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+    flex-wrap: wrap;
+}
+    
+.commentaire #comments .avis {
+    font-size: 0.75em;
+    margin-top: 20px;
+    border: #000 solid 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 40vh;
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    position: relative;
+}
+    
+.commentaire #comments .avis .avisDesc {
+    overflow: hidden;
+}
+    
+.commentaire #comments .avis .avisLink {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    text-align: start;
+    padding: 10px 0;
+}
+    
+.commentaire #comments .avis a {
+    color: #000;
+    font-size: 0.5em;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+}
+    
+    
+.commentaire #comments .btn-danger {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.laisser{
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+.commentaire #comments .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.commentaire .btn-primary {
+    font-size: 0.5em;
+    padding: 10px 20px;
+    background-color: rgb(71, 225, 228);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+    
+.commentaire .btn-primary:hover {
+    background-color: rgb(24, 166, 168);
+}
+    
+.commentaire .btn-secondary {
+    font-size: 0.5em;
+    padding: 10px 20px;
+    background-color: rgb(255, 187, 102);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+    
+.commentaire .btn-secondary:hover {
+    background-color: rgb(255, 165, 54);
+}
+
+.commentaire .btn-third {
+    font-size: 0.5em;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+    
+.commentaire .btn-third:hover {
+    background-color: #5a6268;
+}
+
+/*---------message d'alerte-----------*/
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.alert-danger,
+.alert-danger a{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-danger::before {
+    content: "\26A0";
+    margin-right: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/*---------footer--------*/
+footer{
+    background-color: beige;
+    height: 20vh;
+    display: flex;
+    font-size: 1.7em;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+footer #condition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+footer #condition a{
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+footer #reseaux{
+    padding: 10px 0;
+}
+footer .lienReseau{
+    text-decoration: none;
+    display: flex;
+    color: black;
+    margin: 10px;
+}
+footer .logoReseaux{
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Ipad Air */
+@media (max-width: 1280px) {
+    header{
+        transition: 1s;
+        padding: 0;
+        background-color: #fff;
+        height: 10vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 1s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 99;
+    }
+    header.sticky{
+        transition: 1s;
+        padding: 0;
+        background-color: #fff;
+        height: 10vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: 1s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 99;
+    }
+    header .logo{
+        width: 8vh;
+        height: 8vh;
+        margin: 20px;
+    }
+    header h1{
+        color: #000;
+    }
+    header ul li a{
+        color: #000;
+    }
+    .burger {
+        display: flex;
+        margin-right: 50px;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 90vh;
+        top: 10vh;
+        flex-direction: column;
+        background-color: #fff;
+        width: 40vh;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 98;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        color: #000;
+    }
+
+    .info .containerObj{
+        width: 90%;
+        flex-direction: column;
+    }
+    .first{
+        align-items: end;
+    }
+    .first .fond_ordinateur{
+        display: none;
+        min-width: 200vh;
+        height: 120vh;
+        filter: brightness(80%);
+    }
+    .first .fond_tablette{
+   
+        display: flex;
+        width: 140vh;
+        height: 120vh;
+        filter: brightness(80%);
+    }
+    .first h2{
+        position: absolute;
+        text-align: center;
+        top: 55%;
+        left: 0;
+        color: white;
+        width: 100%;
+        
+    }
+    .info .containerObj .premierObj .imgObj1{
+        width: 90%;
+        height: 30vh;
+    }
+    .info .containerObj2{
+        margin-top: 5vh;
+    }
+    .info .containerObj .deuxiemeObj,
+    .info .containerObj .troisiemeObj{
+        width: 100%;
+        height: 30vh;
+    }
+    .info .containerObj .deuxiemeObj .imgObj2,
+    .info .containerObj .troisiemeObj .imgObj3{
+        width: 80vh;
+        height: 45vh;
+    }
+    .infoSport img{
+        width: 90%;
+        margin: 2vh 0;
+    }
+    .infoSport .sport1{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .infoSport .container .sport2{
+        flex-direction: column;
+        width: 100%;
+        border: #000 2px solid;
+    }
+    .infoSport .autres{
+        border: #000 2px solid;
+    }
+    .commentaire #comments .avis{
+        width: 30vh;
+    }
+    .commentaire #comments{
+        width: 100%;
+    }
+}
+/*iphone12pro*/
+@media (max-width: 530px){
+    header h1{
+        font-size: 0.85em;
+    }
+    .first h2{
+        font-size: 1.2em;
+    }
+    .bot {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    footer{
+        font-size: 1.1em;
+    }
+}

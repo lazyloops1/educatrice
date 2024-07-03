@@ -1,0 +1,5 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Envoyer') }}</button>
+    <a href="{{ path('home.index') }}" class="btn btn-secondary">Retour à la page d'accueil</a>
+{{ form_end(form) }}

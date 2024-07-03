@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact index{% endblock %}
+
+{% block body %}
+<head>
+    <link rel="stylesheet" href="{{ asset('stylecss/styleIndex.css')}}">
+</head>
+{% if is_granted('ROLE_ADMIN') %}
+<div class="container">
+    <h1>Contact index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Sujet</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.sujet }}</td>
+                <td>{{ contact.description }}</td>
+                <td>
+                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}" class="btn btn-primary">Voir</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td>Pas de mail trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('home.index') }}" class="btn btn-secondary">Retour à la page d'accueil</a>
+</div>
+{% else %}
+    <div class="alert alert-danger" role="alert">
+        Vous n'avez pas les droits pour accéder à cette page.
+        <a href="{{ path('app_logout') }}" id="deconnexion">Continuez en mode non connécté</a>
+    </div>
+{% endif %}
+{% endblock %}

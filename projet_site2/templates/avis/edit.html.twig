@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Charlotte Tardiveau - Modifier avis{% endblock %}
+
+{% block body %}
+<head>
+    <link rel="stylesheet" href="{{ asset('stylecss/styleEdit.css') }}">
+</head>
+<div class="container">
+    {% if app.user.nom == avis.nom %}
+        <h2>Edit Avis</h2>
+
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        <a href="{{ path('app_avis_user') }}" class="btn btn-info">Voir mes avis</a>
+        <a href="{{ path('home.index') }}" class="btn btn-secondary">Retour à la page d'accueil</a>
+        
+        {{ form_end(form) }}
+
+        
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            Vous n'avez pas les droits pour accéder à cette page.
+        </div>
+        <a href="{{ path('home.index') }}" class="btn btn-secondary">Retour à la page d'accueil</a>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 165, 54);
+    box-sizing: border-box;
+    margin-top: 25vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 10vh auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30vh;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #e4e4ec;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: rgb(71, 225, 228);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    text-decoration: none;
+    border: none;
+    font-family: 'uniSans';
+    color: #fff;
+}
+
+.btn-succes {
+    font-family: 'uniSans';
+    background-color: rgb(71, 225, 228);
+    color: #fff;
+    border: rgb(71, 225, 228) 2px solid;
+}
+
+.btn-succes:hover {
+    background-color: rgb(24, 166, 168);
+    border: rgb(24, 166, 168) 2px solid;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

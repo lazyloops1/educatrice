@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Index{% endblock %}
+
+{% block body %}
+<head>
+    <link rel="stylesheet" href="{{ asset('stylecss/styleIndex.css')}}">
+</head>
+{% if is_granted('ROLE_ADMIN') %}
+    <div class="container">
+        <h2>User Index</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Roles</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            {% if 'ROLE_ADMIN' in user.roles %}
+                                Admin
+                            {% elseif 'ROLE_BAN' in user.roles %}
+                                Banni
+                            {% elseif 'ROLE_USER' in user.roles %}
+                                Utilisateur
+                            {% else %}
+                                {{ user.roles|json_encode }}
+                            {% endif %}
+                        </td>
+                        {% if 'ROLE_ADMIN' in user.roles %}
+                        <td></td> 
+                        {% elseif 'ROLE_BAN' in user.roles %}
+                        <td>
+                            Déja Banni
+                        </td>
+                        {% else %}
+                        <td>
+                            <form method="post" action="{{ path('app_user_ban', {'id': user.id}) }}" onsubmit="return confirm('Are you sure you want to ban this user?');">
+                                <input type="hidden" name="_token" value="{{ csrf_token('ban' ~ user.id) }}">
+                                <button type="submit" class="btn btn-danger">Ban User</button>
+                            </form>
+                        </td>
+                        {% endif %}
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td>Pas d'utilisateurs trouvés.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ path('home.index') }}" class="btn btn-secondary">Retour à la page d'accueil</a>
+    </div>
+{% else %}
+    <div class="alert alert-danger" role="alert">
+        Vous n'avez pas les droits pour accéder à cette page.
+        <a href="{{ path('app_logout') }}" id="deconnexion">Continuez en mode non connécté</a>
+    </div>
+{% endif %}
+{% endblock %}
