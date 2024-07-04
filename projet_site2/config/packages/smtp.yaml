@@ -1,3 +1,0 @@
-framework:
-    mailer:
-        dsn: 'smtp://smtp.gmail.com:587?encryption=ssl&auth_mode=login&username=p6756965@gmail.com&password=azertyuiop1*'
